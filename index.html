@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- User Greeting -->
+    <div class="user-box">
+       <h2 id="greeting">🌼Hello, User!</h2>
+
+        <button id="changeName">Change Name</button>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+
+    <!-- Search -->
+    <input type="text" id="searchInput" placeholder="Search tasks...">
+
+    <!-- Filters -->
+    <div class="filters">
+        <button data-filter="all" class="filter active">📋 All</button>
+        <button data-filter="completed" class="filter">✅ Completed</button>
+        <button data-filter="pending" class="filter">⏳ Pending</button>
+
+    </div>
+
+    <!-- Add Task -->
+    <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <select id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button id="addBtn">Add</button>
+    </div>
+
+    <!-- Statistics -->
+    <div class="stats">
+        <p>Total: <span id="totalCount">0</span></p>
+        <p>Completed: <span id="completedCount">0</span></p>
+        <p>Pending: <span id="pendingCount">0</span></p>
+    </div>
+
+    <!-- To-Do List -->
+    <ul id="taskList"></ul>
+
+    <!-- Clear all button -->
+    <button id="clearAll" class="clear-btn">Clear All Tasks</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

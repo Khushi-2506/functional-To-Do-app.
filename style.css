@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+    background: linear-gradient(120deg,
+        #ffe7ef,
+        #ffd6f4,
+        #e8deff,
+        #dff4ff,
+        #ffe7ef
+    );
+    background-size: 500% 500%;
+    animation: smoothPastel 18s ease infinite;
+}
+
+
+.app {
+    width: 420px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.user-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-btn {
+    margin: 10px 0;
+    padding: 6px 15px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.filters {
+    margin-top: 10px;
+}
+
+.filter {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: none;
+    background: #bbb;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter.active {
+    background: #5b5bff;
+    color: white;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+}
+
+.task-input {
+    display: flex;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+.task-input input, select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    flex: 1;
+}
+
+#addBtn {
+    background: #5b5bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.stats {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: #f8f8f8;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.priority-high { border-left: 5px solid red; }
+.priority-medium { border-left: 5px solid orange; }
+.priority-low { border-left: 5px solid green; }
+
+.task-buttons button {
+    margin-left: 8px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.edit-btn { background: orange; color: white; }
+.delete-btn { background: red; color: white; }
+.complete-btn { background: green; color: white; }
+
+.clear-btn {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: rgb(255, 83, 83);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #222;
+}
+
+body.dark .app {
+    background: #333;
+    color: white;
+}
+
+body.dark input, body.dark select {
+    background: #444;
+    color: white;
+}
+
+body.dark .task {
+    background: #444;
+}
+
+@keyframes smoothPastel {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
+}
